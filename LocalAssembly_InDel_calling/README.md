@@ -79,7 +79,7 @@ USE_GRID=false
 SMALL_MEMORY=0
 ```
 
-### mapping
+#### mapping
 
 ```sh
 # mapping error-correlated ONT reads
@@ -89,7 +89,7 @@ minimap2 -t 32 -x map-ont -a --MD Sus_scrofa.Sscrofa11.1.dna.toplevel.fa  \ Mat_
 samtools sort -m 3G Mat_ONT.minimap2.bam  Mat_ONT.minimap2.sort
 ```
 
- ### split mapped reads
+ #### split mapped reads
 
 ``` sh
 # split mapped bam files to 60-kb windows sliding by 20-kb
@@ -108,7 +108,7 @@ Mat_ONT_correlated.fa.gz   > Mat_ONT_correlated.fa.gz.retrived.fa
 
 ```
 
-### local assembly
+#### local assembly
 
 ``` sh
  #local assembly for each 60-kb window 
@@ -124,7 +124,7 @@ maxThreads=8
 
 ```
 
-### InDel calling  
+#### InDel calling  
 
 ``` sh
 \#call InDels by local-assembled contigs
